@@ -21,7 +21,7 @@ keywords:
 
 # Participants
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/89077737-9a29-4b1b-ba94-55a664347daa/Untitled.png)
+![participants](../media/images/1_participants.png)
 
 **Buyer**
 
@@ -115,7 +115,7 @@ DID 관련 서비스 로직을 포함하는 블록체인(parachain). DID 등록 
 
 Verifier는 Owner로부터 data-package를 전달받아 검증하고, 검증 성공 시 거래 정산 (execute_trade) 트랜잭션을 실행하는 주체입니다. 구매 건에 대해 Buyer는 신뢰할 수 있는 Verifier를 지정할 수 있으며 Buyer가 직접 Verifier Server를 운영할 수도 있습니다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/a7d06549-658b-45fc-92ba-676bb63b2644/Untitled.png)
+![verifier_flow](../media/images/2_verifier_flow.png)
 
 Owner가 submit-data api를 호출하면 Verifier는 크게 세가지 작업을 수행합니다.
 
@@ -157,7 +157,7 @@ Index Server는 각각의 PWN(Personal Web Node)이 보유하고 있는 데이�
 
 ### **Architecture**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/8a5fd7f0-c083-4092-a703-eda7aee2659f/Untitled.png)
+![index_architecture](../media/images/3_index_architecture.png)
 
 Index Server는 다음과 같은 구성 요소로 이루어져 있습니다:
 
@@ -169,8 +169,7 @@ PWN은 Index Server만의 독특한 Query Language를 사용하여 본인의 Ind
 
 ### Index Server Query Language
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/6619825d-273a-448a-9996-de5ee79c06c1/Untitled.png)
-
+![index_1](../media/images/4_index_1.png)
 Index Server에서는 Index Data를 저장하거나 조회하고자 할 때 독특한 Query Language를 사용하고 있습니다.
 
 기본적으로 GraphQL문법을 사용하지만 실제 각각의 필드가 GraphQL에서 사용되는 방식과는 차이가 있습니다.
@@ -179,7 +178,7 @@ Index Server에서는 Index Data를 저장하거나 조회하고자 할 때 독�
 
 또한 `Number` 타입에 대해서는 `gt`, `gte`, `lt`, `lte` 등 특정 값을 지정하지 않고 범위를 지정하여 표현하는 것도 가능합니다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/7973ab77-3ea5-4dfb-be0e-c8366f586476/Untitled.png)
+![index_2](../media/images/4_index_2.png)
 
 `Data Without Value` 부분은 key 값으로 구성되어 있습니다. 실제 값을 공개하지 않는 필드에 대해서 해당 필드의 key 값으로 구성되어 있습니다.
 
@@ -187,11 +186,11 @@ Index Server에서는 Index Data를 저장하거나 조회하고자 할 때 독�
 
 Index Server에 데이터 저장 시 Index Server에 전달된 Index Server Query Language는 ElasticSearch에 저장될 수 있는 포맷으로 변환되어 저장 됩니다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/6619825d-273a-448a-9996-de5ee79c06c1/Untitled.png)
+![index_3](../media/images/4_index_3.png)
 
 예를 들어 위 사진과 같이 요청 되었다고 한다면 실제 ElasticSearch에는 아래와 같이 저장됩니다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/8bcf7ac6-42b5-49bd-ac4c-2b8badb02124/Untitled.png)
+![index_4](../media/images/4_index_4.png)
 
 Index Server Query Language에서 Data Type에 해당하는 부분은 `key` 에 해당하며 Data With Value에 해당하는 부분은 `index` 필드 내의 각각 포함됩니다. Data Without Value 에 해당하는 부분은 `index` 필드 내 `hadData` 필드 내 Array 값으로 필드명이 포함됩니다.
 
@@ -353,9 +352,7 @@ pub struct DelegateContract<AccountId, BlockNumber> {
 
 ## Execute
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e2db646-9f65-444e-8931-4415baa36265/2e3d1315-75b5-42b8-83d0-52e8d10e5b71/Untitled.png)
-
-!https://hackmd.io/_uploads/B17eE1n4R.png
+![trade_execute](../media/images/5_trade_execute.png)
 
 _Purchase_ 혹은 _Delegate_ 컨트랙트에 대한 합의가 이루어지면 판매자는 구매자에게 오프체인에서 데이터를 전송하게 되며 구매자가 지정한 데이터 검증자인 _Verifier_ 를 통해 유효성 검증을 하고 블록체인 트랜잭션을 통해 컨트랙트에 명시된 조건에 따라 대금이 지급되며 모든 이력은 체인을 통해 확인 가능하다. _Verfier_ 에 의해 대부분의 데이터 유효성 검증(e.g 스키마 확인, 데이터 판매 범위 등)이 이루어지며 스마트 컨트랙트에서는 데이터 거래 컨트랙트 자체에 대한 유효성 검증이 이루어진다.
 
