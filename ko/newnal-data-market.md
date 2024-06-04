@@ -408,41 +408,41 @@ pub struct MarketConfiguration {
 ### 데이터 구매 w/ agency
 
 1. (Buyer) 데이터 구매 등록
-    1. Data Market Chain에 **`register_data_purchase`** 트랜잭션 전송
-    2. agency list에서 원하는 agency를 선정
+    - Data Market Chain에 **`register_data_purchase`** 트랜잭션 전송
+    - agency list에서 원하는 agency를 선정
 2. (Agency) 구매 계약 Sign
-    1. 1에서 생성된 데이터 구매 건 위임에 대해 Agency가 동의하면 서명 트랜잭션 전송
+    - 1에서 생성된 데이터 구매 건 위임에 대해 Agency가 동의하면 서명 트랜잭션 전송
 3. (Agency) 구매 조건에 맞는 데이터 판매자 DID list 조회
-    1. Index Service로부터 구매 조건에 맞는 데이터 판매자가 있는지 주기적으로 체크
+    - Index Service로부터 구매 조건에 맞는 데이터 판매자가 있는지 주기적으로 체크
 4. (Agency) 판매자 DID list에 데이터 판매 요청 알람
 5. (Seller) Verifier에게 데이터 제출
-    1. 데이터 구매 조건에 맞는 Data package 구성하여 Verifier에게 데이터 제출
+    - 데이터 구매 조건에 맞는 Data package 구성하여 Verifier에게 데이터 제출
 6. (Verifier) Data package 검증
-    1. Data package 검증
+    - Data package 검증
 7. (Verifier) Execute trade
-    1. 검증 성공하면 Market Chain에 **`execute_trade`** 트랜잭션 전송하여 거래 정산
+    - 검증 성공하면 Market Chain에 **`execute_trade`** 트랜잭션 전송하여 거래 정산
 8. (Buyer) 구매 데이터 조회
-    1. Verifier가 전달해준 url을 통해 데이터 조회
+    - Verifier가 전달해준 url을 통해 데이터 조회
 
 ### 데이터 구매 w/o agency
 
 1. (Buyer) 데이터 구매 등록
-    1. Data Market Chain에 **`register_data_purchase`** 트랜잭션 전송
+    - Data Market Chain에 **`register_data_purchase`** 트랜잭션 전송
 2. (Seller) Verifier에게 데이터 제출
-    1. 데이터 구매 조건에 맞는 Data package 구성하여 Verifier에게 데이터 제출
+    - 데이터 구매 조건에 맞는 Data package 구성하여 Verifier에게 데이터 제출
 3. (Verifier) Data package 검증
-    1. Data package 검증
+    - Data package 검증
 4. (Verifier) Execute trade
-    1. 검증 성공하면 Market Chain에 **`execute_trade`** 트랜잭션 전송하여 거래 정산
+    - 검증 성공하면 Market Chain에 **`execute_trade`** 트랜잭션 전송하여 거래 정산
 5. (Buyer) 구매 데이터 조회
-    1. Verifier가 전달해준 url을 통해 데이터 조회
+    - Verifier가 전달해준 url을 통해 데이터 조회
 
 ### 데이터 판매 w/ agency
 
 1. (Seller) Sign delegate contract
-    1. 데이터 판매자가 보유한 데이터를 자동으로 판매하고 싶을 경우 Chain에 Agency를 선택하여 **`sign_delegate_contract`** 트랜잭션 전송
+    - 데이터 판매자가 보유한 데이터를 자동으로 판매하고 싶을 경우 Chain에 Agency를 선택하여 **`sign_delegate_contract`** 트랜잭션 전송
 2. (Agency) Make delegate contract
-    1. 1의 판매자가 보유한 데이터 판매를 위임 받을 경우 **`make_delegate_contract`** 트랜잭션을 통해 서명
+    - 1의 판매자가 보유한 데이터 판매를 위임 받을 경우 **`make_delegate_contract`** 트랜잭션을 통해 서명
 3. (Seller) Data Provider에게 전달받은 데이터 PWN에 저장
 4. (Seller) 해당 데이터의 index를 Index Server에 저장
 5. (Agency) 계약한 판매자의 데이터와 일치하는 데이터 구매 건 주기적으로 조회
