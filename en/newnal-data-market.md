@@ -23,43 +23,43 @@ With the rapid advancement of AI technologies like Large Language Models (LLM), 
 
 ![participants](../media/images/1_participants.png)
 
-**Buyer**
+**`Buyer`**
 
 The entity purchasing the data.
 
-**Seller (Owner)**
+**`Seller(Owner)`**
 
 The entity operating the PWN and selling the data. The data stored in the PWN is packaged as a Data Package and submitted to the Verifier.
 
-**Agency**
+**`Agency`**
 
 Periodically queries the Index Server for data sellers matching the transaction conditions on behalf of the Seller or Buyer and sends Data Package submission alerts.
 
-**Verifier**
+**`Verifier`**
 
 The trusted data transaction validator designated by the Buyer, who verifies the Data Package submitted by the Seller. Identified by DID.
 
-**PWN (Personal Web Node)**
+**`PWN(Personal Web Node)`**
 
 A personal web node operated by the Data Owner. Personal data issued by the Data Provider is stored in the PWN, and the index information of the data is stored in the Index Server.
 
-**Data Provider (Issuer)**
+**`Data Provider(Issuer)`**
 
 Various services that issue data in a verifiable form (VC) to users. (e.g., Netflix, Instagram, Google)
 
-**PWN Index Server**
+**`PWN Index Server`**
 
 A server that indexes identification information and data categories of DID received from the PWN and provides a list of DIDs that meet specific conditions.
 
-**Data Market Service**
+**`Data Market Service`**
 
 Handles authentication and various functions for buyers, sellers, and agents, and interaction between the Data Market Chain.
 
-**Data Market Chain**
+**`Data Market Chain`**
 
 A blockchain (parachain) containing the service logic of the Data Market. Consists of smart contracts for data purchase registration and transaction, agency registration, and delegation.
 
-**DID Chain**
+**`DID Chain`**
 
 A blockchain (parachain) containing the service logic related to DID. Consists of smart contracts for DID registration and revocation, document query, and modification.
 

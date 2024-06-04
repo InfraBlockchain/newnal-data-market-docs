@@ -23,43 +23,43 @@ keywords:
 
 ![participants](../media/images/1_participants.png)
 
-**Buyer**
+**`Buyer`**
 
 데이터를 구매하는 주체.
 
-**Seller(Owner)**
+**`Seller(Owner)`**
 
 PWN을 운영하고 데이터를 판매하는 주체. PWN에 저장된 데이터를 Data Package로 구성하여 Verifier에게 제출
 
-**Agency**
+**`Agency`**
 
 Seller 혹은 Buyer를 대신하여 Index 서버로부터 거래 조건에 맞는 데이터 판매자를 주기적으로 조회하여 Data Package 제출 알람 전송
 
-**Verifier**
+**`Verifier`**
 
 Buyer가 지정한 신뢰 기반 데이터 거래 검증자로서, Seller가 제출한 Data Package 검증. DID로 식별
 
-**PWN(Personal Web Node)**
+**`PWN(Personal Web Node)`**
 
 Data Owner가 운영하는 개인 웹 노드(PWN). PWN에 Data provider로부터 발급받은 개인 데이터가 저장되고, 해당 데이터의 index 정보를 Index Server에 저장.
 
-**Data Provider(Issuer)**
+**`Data Provider(Issuer)`**
 
 데이터를 검증 가능한 형태(VC)로 유저에게 발급하는 각종 서비스. (e.g netflix, instagram, google)
 
-**PWN Index Server**
+**`PWN Index Server`**
 
 PWN으로부터 DID의 식별 정보와 데이터 범주를 전달받아 인덱싱하고, 특정 조건에 부합하는 DID list를 제공하는 서버
 
-**Data Market Service**
+**`Data Market Service`**
 
 구매자, 판매자, Agent를 위한 인증 및 각종 기능, Data Market Chain 간 interaction 등을 담당
 
-**Datamarket Chain**
+**`Datamarket Chain`**
 
 Data Market의 서비스 로직을 포함하는 블록체인(parachain). 데이터 구매 등록 및 거래, agency 등록 및 위임 등의 Smart contract로 구성.
 
-**DID Chain**
+**`DID Chain`**
 
 DID 관련 서비스 로직을 포함하는 블록체인(parachain). DID 등록 및 폐기, document 조회 및 수정 등의 Smart contract로 구성.
 
