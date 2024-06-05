@@ -13,6 +13,27 @@ keywords:
     - Data Package
 ---
 
+# Table of Contents
+
+-   [Table of Contents](#table-of-contents)
+-   [Introduction](#introduction)
+-   [Participants](#participants)
+-   [Main Components](#main-components)
+    -   [Data Package](#data-package)
+    -   [Verifier](#verifier)
+    -   [Index Server](#index-server)
+-   [Data Market Smart Contract](#data-market-smart-contract)
+    -   [Overview](#overview)
+    -   [Contracts](#contracts)
+    -   [Execute](#execute)
+    -   [Agency](#agency)
+    -   [Configuration](#configuration)
+-   [Main processes](#main-processes)
+    -   [Agency Registration](#agency-registration)
+    -   [Data Purchase w/ Agency](#data-purchase-w-agency)
+    -   [Data Purchase w/o Agency](#data-purchase-wo-agency)
+    -   [Data Sale w/ Agency](#data-sale-w-agency)
+
 # Introduction
 
 With the rapid advancement of AI technologies like Large Language Models (LLM), the use and security of personal data have become crucial issues. Currently, most user data is stored on centralized servers, and users do not have sufficient control over their data, such as access or deletion. As a result, there are very few platforms where users can manage and trade their data. Moreover, there is a lack of platforms where data from various services, including specific certificates or medical data, can be traded in a trustworthy manner ensuring the source and integrity.

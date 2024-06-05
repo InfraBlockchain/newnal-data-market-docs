@@ -13,6 +13,26 @@ keywords:
     - Data Package
 ---
 
+# Table of Contents
+
+-   [Introduction](#introduction)
+-   [Participants](#participants)
+-   [Main Components](#main-components)
+    -   [Data Package](#data-package)
+    -   [Verifier](#verifier)
+    -   [Index Server](#index-server)
+-   [Data Market Smart Contract](#data-market-smart-contract)
+    -   [Overview](#overview)
+    -   [Contracts](#contracts)
+    -   [Execute](#execute)
+    -   [Agency](#agency)
+    -   [Configuration](#configuration)
+-   [Main processes](#main-processes)
+    -   [Agency 등록](#agency-%EB%93%B1%EB%A1%9D)
+    -   [데이터 구매 w/ agency](#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B5%AC%EB%A7%A4-w-agency)
+    -   [데이터 구매 w/o agency](#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B5%AC%EB%A7%A4-wo-agency)
+    -   [데이터 판매 w/ agency](#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%8C%90%EB%A7%A4-w-agency)
+
 # Introduction
 
 대형 언어 모델(LLM)과 같은 AI 기술의 급속한 발전으로 개인 데이터의 활용과 보안이 매우 중요한 이슈로 부각되고 있습니다. 현재 대부분의 사용자 데이터는 중앙 집중식 서버에 저장되며, 사용자는 자신의 데이터에 대한 접근이나 삭제와 같은 제어 권한을 충분히 갖지 못하고 있습니다. 이로 인해 사용자가 자신의 데이터를 관리하고 이를 거래할 수 있는 플랫폼이 거의 존재하지 않습니다. 또한, 특정 인증서나 의료 데이터뿐만 아니라 다양한 서비스의 데이터 출처와 무결성을 신뢰할 수 있는 방식으로 거래할 수 있는 플랫폼도 부족한 상황입니다.
