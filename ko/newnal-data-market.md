@@ -77,19 +77,19 @@ DID 관련 서비스 로직을 포함하는 블록체인(parachain). DID 등록 
 
 ```json
 {
-    "_dataScope": "{ lifestyle(     category: \"Electronics\",     totalPrice: {amount: {lt:1000, gte:100}},     startTime: {gte: 1648517600, lt: 1648717600}     ) }",
-    "purchaseElectronics.json" : { "_type": "VC", "_digest" : "someHash" },
-    "facebook" : {
-      "_type" : "DIR",
-      "profile.json" : { "_type": "VC", "_digest" : "someHash" },
-      "data" : {
-         "_type" : "DIR",
-         "facebookWatch2301-2404.json" : { "_type" : "VC", "_digest" : "someHash" },
-         "instagramImgs2404.json" : { "_type" : "VC", "_digest" : "someHash" },
-         "instagramImgs2404.jpg" : { "_type" : "BIN", "_digest" : "someHash" }
-      }
-    },
-};
+	"_dataScope": "{ lifestyle(     category: \"Electronics\",     totalPrice: {amount: {lt:1000, gte:100}},     startTime: {gte: 1648517600, lt: 1648717600}     ) }",
+	"purchaseElectronics.json": { "_type": "VC", "_digest": "someHash" },
+	"facebook": {
+		"_type": "DIR",
+		"profile.json": { "_type": "VC", "_digest": "someHash" },
+		"data": {
+			"_type": "DIR",
+			"facebookWatch2301-2404.json": { "_type": "VC", "_digest": "someHash" },
+			"instagramImgs2404.json": { "_type": "VC", "_digest": "someHash" },
+			"instagramImgs2404.jpg": { "_type": "BIN", "_digest": "someHash" }
+		}
+	}
+}
 ```
 
 **Data Package 생성 및 전달**
