@@ -96,6 +96,7 @@ DID 관련 서비스 로직을 포함하는 블록체인(parachain). DID 등록 
     -   Bin(파일) type의 경우, 반드시 파일 이름과 같은 VC가 존재하며 해당 VC는 digest와 originalFilename을 credentialSubject로 가져야만 합니다.
 
 ```json
+//index.json (VC signed by Owner)
 {
 	"_dataScope": "{ lifestyle(     category: \"Electronics\",     totalPrice: {amount: {lt:1000, gte:100}},     startTime: {gte: 1648517600, lt: 1648717600}     ) }",
 	"purchaseElectronics.json": { "_type": "VC", "_digest": "someHash" },
@@ -109,7 +110,18 @@ DID 관련 서비스 로직을 포함하는 블록체인(parachain). DID 등록 
 			"instagramImgs2404.jpg": { "_type": "BIN", "_digest": "someHash" }
 		}
 	}
+    ... // VC related fields
 }
+
+// data-package file structure
+// ├── index.json
+// ├── purchaseElectronics.json
+// ├── facebook
+// ├─────profile.json
+// ├─────data
+// ├────────facebookWatch2301-2404.json
+// ├────────instagramImgs2404.json
+// └────────instagramImgs2404.bin
 ```
 
 **Data Package 생성 및 전달**

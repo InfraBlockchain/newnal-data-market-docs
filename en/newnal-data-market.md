@@ -15,7 +15,6 @@ keywords:
 
 # Table of Contents
 
--   [Table of Contents](#table-of-contents)
 -   [Introduction](#introduction)
 -   [Participants](#participants)
 -   [Main Components](#main-components)
